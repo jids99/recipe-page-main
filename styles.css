@@ -58,8 +58,8 @@
     --fw-semibold: 600;
     --fw-bold: 700;
 
-    --fs-h1: 2rem;
-    --fs-h2: 1.75rem;
+    --fs-h1: 2.45rem;
+    --fs-h2: 1.70rem;
 }
 
 body {
@@ -167,7 +167,7 @@ li{
 }
 
 .nutrition-facts > div {
-  padding: .5rem;
+  padding: 1rem;
   position: relative;
 }
 
