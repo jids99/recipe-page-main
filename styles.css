@@ -1,0 +1,202 @@
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+
+    --tf-outfit: "Outfit", sans-serif;
+    --tf-young-serif: "Young Serif", serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --fs-h1: 2.25rem;
+    --fs-h2: 1.5rem;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Eggshell);
+    height: 100dvh;
+}
+
+.card {
+    margin-top: 125px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    width: auto;
+    font-size: 16px;
+    padding: 3rem;
+    color: var(--WengeBrown);
+    font-family: var(--tf-outfit);
+    max-width: 740px;
+  }
+
+.img-omlette {
+  border-radius: 1rem;
+}
+
+h1 {
+  font-family: var(--tf-young-serif);
+  font-weight: var(--fw-regular);
+  margin-bottom: 0;
+  font-size: var(--fs-h1);
+  color: var(--DarkCharcoal);
+  line-height: 1;
+}
+
+.description {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--Nutmeg);
+  font-family: var(--tf-young-serif);
+  font-weight: var(--fw-regular);
+  margin-bottom: .5rem;
+}
+
+li > span {
+  font-weight: 500;
+}
+
+li::marker {
+  color:var(--Nutmeg)
+}
+
+.line {
+  border-bottom: 1px solid var(--LightGrey);
+  margin: .5rem;
+  margin-top: 1rem;
+}
+
+.prep-time {
+  background-color: var(--RoseWhite);
+  padding: 1.5rem;
+  color: var(--WengeBrown);
+  font-family: var(--tf-outfit);
+  border-radius: .88rem;
+}
+
+.prep-time > h2 {
+  font-family: var(--tf-outfit);
+  color: var(--DarkRaspberry);
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+ul {
+  margin: 0;
+}
+
+li{
+  margin-bottom: .5rem;
+}
+
+.prep-time > ul > li::marker {
+  color:var(--DarkRaspberry);
+}
+
+.nutrition-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem
+}
+
+.nutrition-facts > div:nth-child(2n) {
+  color: var(--Nutmeg);
+  font-weight: var(--fw-semibold);
+}
+
+.nutrition-facts > div {
+  padding: .5rem;
+  position: relative;
+}
+
+.nutrition-facts > div::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 10px); /* Adjust the width based on the gap value */
+  height: 1px;
+  background-color: var(--LightGrey); /* Change this to your desired line color */
+  bottom: -5px; /* Adjust the position of the line as needed */
+  left: -5px; /* Adjust the position of the line as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    .body {
+      padding: 0;
+    }
+
+    .card {
+      padding: 0;
+      margin: 0;
+    }
+
+    .img-omlette {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .content {
+      padding: 1.5rem;
+    }
+}
