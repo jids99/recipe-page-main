@@ -59,7 +59,7 @@
     --fw-bold: 700;
 
     --fs-h1: 2.25rem;
-    --fs-h2: 1.5rem;
+    --fs-h2: 2rem;
 }
 
 body {
@@ -67,11 +67,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--Eggshell);
-    height: 100dvh;
 }
 
 .card {
-    margin-top: 125px;
+    margin-top: 120px;
+    margin-bottom: 120px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -86,6 +86,7 @@ body {
 
 .img-omlette {
   border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -120,8 +121,7 @@ li::marker {
 
 .line {
   border-bottom: 1px solid var(--LightGrey);
-  margin: .5rem;
-  margin-top: 1rem;
+  margin: 1.5rem;
 }
 
 .prep-time {
@@ -136,7 +136,7 @@ li::marker {
   font-family: var(--tf-outfit);
   color: var(--DarkRaspberry);
   font-size: 1.25rem;
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-semibold);
   margin-top: 0;
   margin-bottom: .5rem;
 }
