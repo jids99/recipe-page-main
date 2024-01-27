@@ -58,7 +58,7 @@
     --fw-semibold: 600;
     --fw-bold: 700;
 
-    --fs-h1: 2.25rem;
+    --fs-h1: 2.75rem;
     --fs-h2: 2rem;
 }
 
@@ -104,7 +104,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: var(--fs-h2);
   color: var(--Nutmeg);
   font-family: var(--tf-young-serif);
   font-weight: var(--fw-regular);
